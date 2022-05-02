@@ -1,7 +1,8 @@
 .header {
   position: absolute;
-  top: 60px;
+  top: 40px;
   width: 100%;
+  z-index: 99;
 
   &__wrapper {
     display: grid;
