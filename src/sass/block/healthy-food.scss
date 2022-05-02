@@ -28,20 +28,6 @@
     transform: translateY(-50%);
   }
 
-  &__title {
-    font-size: 3.125rem;
-    line-height: 4rem;
-    font-weight: 400;
-    color: $color-dark;
-    margin-bottom: 72px;
-  }
-
-  &__text {
-    max-width: 615px;
-    font-size: 1.5625rem;
-    line-height: 1.75rem;
-  }
-
   .row {
     align-items: center;
     column-gap: 50px;

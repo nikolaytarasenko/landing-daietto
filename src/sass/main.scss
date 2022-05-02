@@ -52,6 +52,22 @@ img {
     height: auto;
 }
 
+.section {
+    &__title {
+        font-size: 3.125rem;
+        line-height: 4rem;
+        font-weight: 400;
+        color: $color-dark;
+        margin-bottom: 72px;
+    }
+
+    &__text {
+        max-width: 615px;
+        font-size: 1.5625rem;
+        line-height: 1.75rem;
+    }
+}
+
 .btn {
     font-size: 1.25rem;
     font-weight: 700;
@@ -107,3 +123,4 @@ img {
 @import 'block/header.scss';
 @import 'block/hero.scss';
 @import 'block/healthy-food.scss';
+@import 'block/information.scss';
