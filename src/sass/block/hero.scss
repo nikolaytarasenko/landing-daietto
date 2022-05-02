@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__main {
+    max-width: 650px;
+    margin-top: 250px;
+  }
+
+  &__subtitle {
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 2.375rem;
+    margin-bottom: 29px;
+  }
+
+  &__title {
+    font-size: 4.375rem;
+    font-weight: 400;
+    line-height: 3.9375rem;
+    color: $color-dark;
+    margin-bottom: 29px;
+  }
+
+  &__description {
+    font-size: 1.5625rem;
+    line-height: 1.75rem;
+    margin-bottom: 47px;
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    margin-bottom: 167px;
+  }
+
+  &__btn {
+    margin-right: 90px;
+  }
+
+  .text-green {
+    display: block;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding-top: 190px;
+  }
+
+  &__img {
+    position: absolute;
+
+    &_login {
+      left: 0;
+    }
+
+    &_activity {
+      right: 0;
+      bottom: -30px;
+    }
+
+    &_info {
+      left: 140px;
+    }
+
+    &_result {
+      right: -200px;
+      bottom: 140px;
+    }
+  }
+}
+
+.platforms {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    font-size: 0;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 45px;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $color-green;
+        }
+      }
+    }
+
+    svg {
+      path {
+        transition: 0.1s ease-out;
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+
+  &__link {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 42px;
+
+      &::after {
+        content: '/';
+        position: absolute;
+        right: -24px;
+      }
+    }
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+}

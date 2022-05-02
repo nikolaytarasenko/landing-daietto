@@ -16,6 +16,8 @@ body {
     height: 100%;
     font-family: $font-family;
     background-color: $color-silver-light;
+    color: $color-main-blue;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -45,4 +47,41 @@ ul {
     list-style: none;
 }
 
+.btn {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 21px 68px;
+
+    &_black {
+        color: $color-white;
+        background-color: $color-dark;
+        border-radius: 10px;
+
+        &:hover {
+            color: $color-white;
+            background-color: lighten($color-dark, 20%);
+        }
+    }
+}
+
+.text-green {
+    color: $color-green;
+}
+
+.text-decor {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -28px;
+        width: 62px;
+        height: 8px;
+        background-color: $color-dark;
+        border-radius: 5px;
+    }
+}
+
 @import 'block/header.scss';
+@import 'block/hero.scss';
