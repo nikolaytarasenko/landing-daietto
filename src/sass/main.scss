@@ -47,6 +47,11 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .btn {
     font-size: 1.25rem;
     font-weight: 700;
@@ -64,8 +69,24 @@ ul {
     }
 }
 
+.row {
+    display: flex;
+}
+
+.col {
+    padding: 0 15px;
+}
+
 .text-green {
     color: $color-green;
+}
+
+.text-red {
+    color: $color-red;
+}
+
+.text-black {
+    color: $color-dark;
 }
 
 .text-decor {
@@ -85,3 +106,4 @@ ul {
 
 @import 'block/header.scss';
 @import 'block/hero.scss';
+@import 'block/healthy-food.scss';

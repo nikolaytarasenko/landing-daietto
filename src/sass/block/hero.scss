@@ -82,11 +82,15 @@
 
     &_login {
       left: 0;
+      border-radius: 30px;
+      box-shadow: 0 0 99px rgba(42, 90, 123, 0.23);
     }
 
     &_activity {
       right: 0;
       bottom: -30px;
+      border-radius: 30px;
+      box-shadow: 0 3px 99px rgba(42, 90, 123, 0.23);
     }
 
     &_info {
