@@ -1,3 +1,4 @@
+@import 'utils/fonts.scss';
 @import 'utils/vars.scss';
 
 * {
@@ -7,7 +8,41 @@
 }
 
 html {
+    height: 100%;
     font-size: $base-font-size;
 }
 
-@import 'block/title.scss';
+body {
+    height: 100%;
+    font-family: $font-family;
+    background-color: $color-silver-light;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $content-size;
+    width: 100%;
+}
+
+a {
+    color: $color-main-blue;
+    text-decoration: none;
+    transition: 0.15s ease-out;
+
+    &:hover {
+        color: #23233C;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+@import 'block/header.scss';
