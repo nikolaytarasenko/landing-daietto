@@ -15,17 +15,27 @@
   \************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("const sum = __webpack_require__(/*! ./module/sum.js */ \"./src/js/module/sum.js\");\r\nconsole.log(sum(2, 10));\r\nconsole.log(sum(12, 5));\n\n//# sourceURL=webpack://landing-daietto/./src/js/main.js?");
+eval("const toggleMobileNavigation = __webpack_require__(/*! ./module/toggleMobileNavigation.js */ \"./src/js/module/toggleMobileNavigation.js\");\r\nconst hideMobileNavigationOnDesktop = __webpack_require__(/*! ./module/hideMobileNavigationOnDesktop.js */ \"./src/js/module/hideMobileNavigationOnDesktop.js\");\r\n\r\nconst init = () => {\r\n    const hamburger = document.querySelector('.hamburger');\r\n\r\n    hamburger.addEventListener('click', toggleMobileNavigation);\r\n    window.addEventListener('resize', hideMobileNavigationOnDesktop);\r\n}\r\n\r\nwindow.addEventListener('load', init);\n\n//# sourceURL=webpack://landing-daietto/./src/js/main.js?");
 
 /***/ }),
 
-/***/ "./src/js/module/sum.js":
-/*!******************************!*\
-  !*** ./src/js/module/sum.js ***!
-  \******************************/
+/***/ "./src/js/module/hideMobileNavigationOnDesktop.js":
+/*!********************************************************!*\
+  !*** ./src/js/module/hideMobileNavigationOnDesktop.js ***!
+  \********************************************************/
 /***/ (function(module) {
 
-eval("module.exports = (a, b) => a + b;\n\n//# sourceURL=webpack://landing-daietto/./src/js/module/sum.js?");
+eval("const hideMobileNavigationOnDesktop = e => {\r\n    const windowInnerWidth = window.innerWidth;\r\n    const navigation = document.querySelector('.header__navigation');\r\n\r\n    if (windowInnerWidth > 992) navigation.classList.remove('opened');\r\n}\r\n\r\nmodule.exports = hideMobileNavigationOnDesktop;\n\n//# sourceURL=webpack://landing-daietto/./src/js/module/hideMobileNavigationOnDesktop.js?");
+
+/***/ }),
+
+/***/ "./src/js/module/toggleMobileNavigation.js":
+/*!*************************************************!*\
+  !*** ./src/js/module/toggleMobileNavigation.js ***!
+  \*************************************************/
+/***/ (function(module) {
+
+eval("const toggleMobileNavigation = e => {\r\n    const navigation = document.querySelector('.header__navigation');\r\n\r\n    navigation.classList.toggle('opened');\r\n}\r\n\r\nmodule.exports = toggleMobileNavigation;\n\n//# sourceURL=webpack://landing-daietto/./src/js/module/toggleMobileNavigation.js?");
 
 /***/ })
 
