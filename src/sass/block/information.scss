@@ -2,6 +2,10 @@
   position: relative;
   padding: 50px 0 100px;
 
+  @media (max-width: 992px) {
+    padding: 50px 0 0;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -14,6 +18,10 @@
     box-shadow: 50px 50px 50px rgba(171, 182, 204, 0.2);
     transform: rotate(342deg);
     z-index: -1;
+
+    @media (max-width: 1366px) {
+      display: none;
+    }
   }
 
   .col {
@@ -25,5 +33,9 @@
   .row {
     align-items: center;
     column-gap: 50px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
   }
 }

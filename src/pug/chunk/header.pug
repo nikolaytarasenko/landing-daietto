@@ -3,10 +3,15 @@ header.header
         .header__wrapper
             a.logo(href="/")
                 img.logo__img(src="./img/logo.png")
-            nav.main-nav
-                a.main-nav__link(href="#") Nosotros
-                a.main-nav__link(href="#") Menu
-                a.main-nav__link(href="#") Contacto
-            .authorization
-                a.authorization__link(href="#") Login
-                a.authorization__link(href="#") Register
+            .header__navigation
+                nav.main-nav
+                    a.main-nav__link(href="#") Nosotros
+                    a.main-nav__link(href="#") Menu
+                    a.main-nav__link(href="#") Contacto
+                .authorization
+                    a.authorization__link(href="#") Login
+                    a.authorization__link(href="#") Register
+            button.header__hamburger.hamburger
+                span.hamburger__line
+                span.hamburger__line
+                span.hamburger__line

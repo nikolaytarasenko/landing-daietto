@@ -1,6 +1,11 @@
+/* Libs */
+@import "utils/libs.scss";
+
+/* Utils */
 @import 'utils/fonts.scss';
 @import 'utils/vars.scss';
 
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -59,12 +64,22 @@ img {
         font-weight: 400;
         color: $color-dark;
         margin-bottom: 72px;
+
+        @media (max-width: 992px) {
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-bottom: 40px;
+        }
     }
 
     &__text {
         max-width: 615px;
         font-size: 1.5625rem;
         line-height: 1.75rem;
+
+        @media (max-width: 992px) {
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -120,6 +135,7 @@ img {
     }
 }
 
+/* Blocks */
 @import 'block/header.scss';
 @import 'block/hero.scss';
 @import 'block/healthy-food.scss';

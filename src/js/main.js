@@ -1,3 +1,11 @@
-const sum = require('./module/sum.js');
-console.log(sum(2, 10));
-console.log(sum(12, 5));
+const toggleMobileNavigation = require('./module/toggleMobileNavigation.js');
+const hideMobileNavigationOnDesktop = require('./module/hideMobileNavigationOnDesktop.js');
+
+const init = () => {
+    const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', toggleMobileNavigation);
+    window.addEventListener('resize', hideMobileNavigationOnDesktop);
+}
+
+window.addEventListener('load', init);

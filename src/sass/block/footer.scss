@@ -13,6 +13,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 60px;
+
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
   }
 
   &__nav {

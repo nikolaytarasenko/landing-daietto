@@ -4,32 +4,130 @@
   width: 100%;
   z-index: 99;
 
+  @media (max-width: 992px) {
+    top: 20px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: auto 1fr auto;
     justify-items: center;
     align-items: center;
+
+    @media (max-width: 992px) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    transition: 0.2s ease-out;
+
+    @media (max-width: 992px) {
+      position: absolute;
+      top: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color-main-blue;
+      padding: 20px 0;
+
+      visibility: hidden;
+      opacity: 0;
+
+      &.opened {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.logo {
+  transition: 0.1s ease-out;
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
 .main-nav {
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__link {
     &:not(:last-child) {
       margin-right: 66px;
+
+      @media (max-width: 992px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      color: $color-white;
+      margin-bottom: 8px;
     }
   }
 }
 
 .authorization {
+  margin-left: 150px;
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
   &__link {
     color: #23233C;
 
     &:not(:last-child) {
       margin-right: 54px;
+
+      @media (max-width: 992px) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
     }
 
     &:hover {
       color: $color-green;
+    }
+
+    @media (max-width: 992px) {
+      color: $color-white;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+
+  @media (max-width: 992px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  &__line {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: $color-dark;
+    border-radius: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
     }
   }
 }
