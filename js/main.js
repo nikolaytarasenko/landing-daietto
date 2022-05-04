@@ -15,7 +15,7 @@
   \************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("const toggleMobileNavigation = __webpack_require__(/*! ./module/toggleMobileNavigation.js */ \"./src/js/module/toggleMobileNavigation.js\");\r\nconst hideMobileNavigationOnDesktop = __webpack_require__(/*! ./module/hideMobileNavigationOnDesktop.js */ \"./src/js/module/hideMobileNavigationOnDesktop.js\");\r\n\r\nconst init = () => {\r\n    const hamburger = document.querySelector('.hamburger');\r\n\r\n    hamburger.addEventListener('click', toggleMobileNavigation);\r\n    window.addEventListener('resize', hideMobileNavigationOnDesktop);\r\n}\r\n\r\nwindow.addEventListener('load', init);\n\n//# sourceURL=webpack://landing-daietto/./src/js/main.js?");
+eval("const toggleMobileNavigation = __webpack_require__(/*! ./module/toggleMobileNavigation.js */ \"./src/js/module/toggleMobileNavigation.js\");\r\nconst hideMobileNavigationOnDesktop = __webpack_require__(/*! ./module/hideMobileNavigationOnDesktop.js */ \"./src/js/module/hideMobileNavigationOnDesktop.js\");\r\nconst initStickyHeader = __webpack_require__(/*! ./module/initStickyHeader.js */ \"./src/js/module/initStickyHeader.js\");\r\n\r\nconst init = () => {\r\n    const hamburger = document.querySelector('.hamburger');\r\n\r\n    hamburger.addEventListener('click', toggleMobileNavigation);\r\n    window.addEventListener('resize', hideMobileNavigationOnDesktop);\r\n    window.addEventListener('scroll', initStickyHeader);\r\n}\r\n\r\nwindow.addEventListener('load', init);\n\n//# sourceURL=webpack://landing-daietto/./src/js/main.js?");
 
 /***/ }),
 
@@ -26,6 +26,16 @@ eval("const toggleMobileNavigation = __webpack_require__(/*! ./module/toggleMobi
 /***/ (function(module) {
 
 eval("const hideMobileNavigationOnDesktop = e => {\r\n    const windowInnerWidth = window.innerWidth;\r\n    const navigation = document.querySelector('.header__navigation');\r\n\r\n    if (windowInnerWidth > 992) navigation.classList.remove('opened');\r\n}\r\n\r\nmodule.exports = hideMobileNavigationOnDesktop;\n\n//# sourceURL=webpack://landing-daietto/./src/js/module/hideMobileNavigationOnDesktop.js?");
+
+/***/ }),
+
+/***/ "./src/js/module/initStickyHeader.js":
+/*!*******************************************!*\
+  !*** ./src/js/module/initStickyHeader.js ***!
+  \*******************************************/
+/***/ (function(module) {
+
+eval("const initStickyHeader = e => {\r\n    const header = document.querySelector('.header');\r\n    const scrollY = window.scrollY;\r\n\r\n    header.classList.toggle('sticky', scrollY > 0);\r\n}\r\n\r\nmodule.exports = initStickyHeader;\n\n//# sourceURL=webpack://landing-daietto/./src/js/module/initStickyHeader.js?");
 
 /***/ }),
 
